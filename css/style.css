@@ -1,0 +1,35 @@
+body{
+  background-color: #cecece;
+}
+.wrapper{
+  margin: 0 auto;
+  padding-top: 40px;
+  width: 60%;
+  min-height: 700px;
+  text-align: center;
+  background-color: #eee;
+}
+
+#timer-box{
+  font-size: 50px;
+  font-weight: 700;
+  padding: 15px;
+  color: #c7100b;
+}
+
+#timer-box span{
+  display: inline-block;
+  width: 70px;
+}
+
+input[type='button']{
+  width: 100px;
+  margin-left: 20px;
+}
+
+#split-box{
+  padding-top: 20px;
+  color: #0568a7;
+  font-size: 25px;
+  font-weight: bold;
+}

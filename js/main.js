@@ -14,16 +14,16 @@ var timer = {
   pauseValue: 0,          //храним значения таймера в момент паузы
 
   start: function () {
-    if (startButton.value == 'start') {
+    if (startButton.value == 'Start') {
       timer.status = 1;
-      startButton.value = 'pause';
+      startButton.value = 'Pause';
       timer.startTime = new Date();
       timer.findTime();
       timer.timerId = setInterval(timer.findTime, 31);
     }
     else {
       timer.stop();
-      startButton.value = 'start';
+      startButton.value = 'Start';
     }
   },
 
@@ -50,7 +50,7 @@ var timer = {
     if (min < 10)  min = '0' + min;
     if (min < 10)  h = '0' + h;
 
-    return h + ' : ' + min + ' : ' + sec + ' : ' + ms;
+    return h + ':' + min + ':' + sec + '.<span>' + ms + '</span>';
   },
 
   getSplit: function () {
@@ -70,12 +70,12 @@ var timer = {
 
   reset: function () {
     clearInterval(timer.timerId);
-    timerBox.innerHTML = '00 : 00 : 00 : 000';
+    timerBox.innerHTML = '00:00:00.<span>000</span>';
     splitBox.innerHTML = '';
     timer.status = 0;
     timer.timeDifferensMs = 0;
     timer.pauseValue = 0;
-    startButton.value = 'start';
+    startButton.value = 'Start';
   }
 };
 
