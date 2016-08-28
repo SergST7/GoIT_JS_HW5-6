@@ -16,7 +16,7 @@ var timer = {
   start: function () {
     if (startButton.value == 'Start') {
       timer.status = 1;
-      startButton.value = 'Pause';
+      startButton.value = 'Stop';
       timer.startTime = new Date();
       timer.findTime();
       timer.timerId = setInterval(timer.findTime, 31);
@@ -50,7 +50,7 @@ var timer = {
     if (min < 10)  min = '0' + min;
     if (min < 10)  h = '0' + h;
 
-    return h + ':' + min + ':' + sec + '.<span>' + ms + '</span>';
+    return '<span>' + h + ':' + min + ':' + sec + '</span><span class="ms">.' + ms + '</span>';
   },
 
   getSplit: function () {
@@ -70,7 +70,7 @@ var timer = {
 
   reset: function () {
     clearInterval(timer.timerId);
-    timerBox.innerHTML = '00:00:00.<span>000</span>';
+    timerBox.innerHTML = '<span>00:00:00</span><span class="ms">.000</span>';
     splitBox.innerHTML = '';
     timer.status = 0;
     timer.timeDifferensMs = 0;

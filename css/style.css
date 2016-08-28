@@ -3,8 +3,8 @@ body{
 }
 .wrapper{
   margin: 0 auto;
-  padding-top: 40px;
-  width: 60%;
+  padding-top: 50px;
+  width: 75%;
   min-height: 700px;
   text-align: center;
   background-color: #eee;
@@ -13,18 +13,20 @@ body{
 #timer-box{
   font-size: 50px;
   font-weight: 700;
-  padding: 15px;
   color: #c7100b;
 }
 
 #timer-box span{
   display: inline-block;
-  width: 70px;
+}
+
+.ms{
+  width: 100px;
 }
 
 input[type='button']{
   width: 100px;
-  margin-left: 20px;
+  margin: 5px 10px;
 }
 
 #split-box{
